@@ -10,6 +10,18 @@ namespace IntroToOOP
     {
         static void Main(string[] args)
         {
+            Cat firstCat = new Cat();
+            firstCat.Name = "Mr. Fuzzy";
+
+            Cat secondCat = new Cat("Midnight", 14, "black");
+
+            Console.WriteLine(firstCat.Name);
+            Console.WriteLine(secondCat.Name);
+
+            firstCat.Eat();
+
+            secondCat.Meow();
+
         }
     }
 }
