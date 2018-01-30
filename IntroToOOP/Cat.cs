@@ -15,20 +15,26 @@ namespace IntroToOOP
         private int age;
         private string furColor;
         private bool isHungry = true; // cat will always be hungry from the start
-            // booleans do not to have be set from start
+                                      // booleans do not to have be set from start
+        private string hairLength;
 
 
         // Properties - allows to set priorities
 
         public string Name // Mehtod - verb
         {
-            get { return this.name; } // get allows to see value of name
-            // sets your properties
+            get { return this.name; } // get allows to see value of name and sets your properties
             set { this.name = value; } // set allows to assign value of name
             // "this" allows for specificity
             // get & set not always go together
             // ex: without a "set" value, you are unable to modify "get" value
 
+        }
+
+        public string HairLength
+        {
+            get { return this.hairLength; }
+            set { this.hairLength = value; }
         }
         
 
@@ -50,6 +56,11 @@ namespace IntroToOOP
             this.age = age;
             this.furColor = furColor;
         }
+
+        public Cat (string hairLength)
+        {
+            this.hairLength = hairLength;
+        }
         
         // Methods
         public void Eat()
@@ -61,10 +72,22 @@ namespace IntroToOOP
             Console.WriteLine("Is the cat hungry? " + isHungry);
         }
 
-        // Methods
+        // method 
         public void Meow()
         {
             Console.WriteLine("\a");
+        }
+
+        public string Hairball()
+        {
+            if (hairLength == "too long")
+            {
+                return (this.name + " has a hairball.");
+            }
+            else
+            {
+                return (this.name + " is nicely grommed.");
+            }
         }
 
     }

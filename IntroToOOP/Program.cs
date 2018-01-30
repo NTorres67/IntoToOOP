@@ -22,6 +22,16 @@ namespace IntroToOOP
 
             secondCat.Meow();
 
+            firstCat.HairLength = "nice and short";
+            secondCat.HairLength = "too long";
+
+            Console.WriteLine(firstCat.Hairball());
+            Console.WriteLine(secondCat.Hairball());
+
+            //Cat thirdCat = new Cat(1, true);
+
+
+
         }
     }
 }
