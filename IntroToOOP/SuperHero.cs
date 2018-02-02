@@ -46,23 +46,25 @@ namespace IntroToOOP
 
         }
 
-        public SuperHero(string name, bool canFly)
+        public SuperHero(string name, bool canFly, int topSpeed, int hearingDistance)
         {
             this.name = name;
             this.canFly = canFly;
-        }
-
-        public SuperHero (string name, int topSpeed)
-        {
-            this.name = name;
             this.topSpeed = topSpeed;
-        }
-
-        public SuperHero (string name, int hearingDistance) // ........................ ISSUE
-        {
-            this.name = name;
             this.hearingDistance = hearingDistance;
         }
+
+        //public SuperHero (string name, int topSpeed)
+        //{
+        //    this.name = name;
+        //    this.topSpeed = topSpeed;
+        //}
+
+        //public SuperHero (string name, int hearingDistance) // ........................ ISSUE
+        //{
+        //    this.name = name;
+        //    this.hearingDistance = hearingDistance;
+        //}
 
         // Methods
         public void Locomotion()
@@ -74,14 +76,14 @@ namespace IntroToOOP
             Console.WriteLine("Afer eating peas, can " + name + " fly?" + canFly);
         }
 
-        public void Sound()
-        {
-            if (hearingDistance)
-            {
-                hearingDistance = 200;
-            }
-            Console.WriteLine("After eating rice, the hearingDistance of " + name + " will increase to " + hearingDistance + " miles.");
-        }
+        //public void Sound()
+        //{
+        //    if (hearingDistance)
+        //    {
+        //        hearingDistance = 200;
+        //    }
+        //    Console.WriteLine("After eating rice, the hearingDistance of " + name + " will increase to " + hearingDistance + " miles.");
+        //}
 
     }
 }

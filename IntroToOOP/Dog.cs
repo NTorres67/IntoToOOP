@@ -77,9 +77,11 @@ namespace IntroToOOP
 
         } 
 
-        public Dog(bool run)
+        public Dog(bool run, bool potty, bool cuddle)
         {
             this.run = run;
+            this.potty = potty;
+            this.cuddle = cuddle;
         }
 
         //public Dog(bool potty) // .............. ISSUE

@@ -20,15 +20,15 @@ namespace IntroToOOP
 
 
         // Properties - allows to set priorities
+        // "this" allows for specificity
+        // get & set not always go together
+        // ex: without a "set" value, you are unable to modify "get" value
 
         public string Name // Mehtod - verb
         {
             get { return this.name; } // get allows to see value of name and sets your properties
             set { this.name = value; } // set allows to assign value of name
-            // "this" allows for specificity
-            // get & set not always go together
-            // ex: without a "set" value, you are unable to modify "get" value
-
+            
         }
 
         public string HairLength
@@ -40,13 +40,16 @@ namespace IntroToOOP
 
         //I need BEHAVIORS
         // Constructors - allow use to create an instance of that class
+        // What are they exactly
 
         public Cat()
         {
             // default constructor (constructor creates new object of that data type)
-            // takes no parameters (nothing in the parentheses)
+            // NEVER has parameters (nothing in the parentheses)
             // public constructor allows access to private fields
             // ALWAYS HAVE A DEFAULT CONSTRUCTOR
+            // If the default constructor has a variable, the variable will carry through
+                // example:  this.name = "John"; 
 
         }
 
@@ -57,12 +60,28 @@ namespace IntroToOOP
             this.furColor = furColor;
         }
 
+        //// OVERLOADED CONSTRUCTOR
+        //public Cat(string name) // overloaded constructor ==> != private string name from above, give another name
+        //{
+        //    string name = name; // == private string name
+        //}
+
         public Cat (string hairLength)
         {
             this.hairLength = hairLength;
         }
         
         // Methods
+        // How do they interact with fields or Properties?
+
+        // TUTORING
+        public void NameChaneg(string NewName)
+        {
+            this.name = NewName;
+        }
+
+
+
         public void Eat()
         {
             if(isHungry)
